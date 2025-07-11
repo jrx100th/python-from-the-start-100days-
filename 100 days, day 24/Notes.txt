@@ -1,0 +1,34 @@
+## 183
+How to open, read and write to files using "with" keyword
+
+saving the highscore in a seperate file
+
+
+open() will open access the file,
+
+
+
+
+185 .relative and absolute file paths
+
+in computers files and folders
+
+
+absolute file path : that starts from the root of the computer system
+
+relative file path : from the current folder/position in the computer 
+in the current working directory = cwd
+
+rfp from cwd
+
+./ = look in the current folder  and even just mentioning the folder/file will also be fine
+
+if we want to go to the upward in the directory tree
+
+../ = look in the parent folder 
+
+just comment # those fucking docstrings because it will lead to error sometimes especially when "/n", stuff like that is there
+
+
+
+Now coming to the Mail merging challenge
