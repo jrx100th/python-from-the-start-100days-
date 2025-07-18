@@ -1,0 +1,209 @@
+GUI started with MAC Lisa commercially
+
+import tkinter
+
+window = tkinter.Tk()                   # screen initialization
+window.title("My first GUI Program")    # window title
+window.minsize(width=500, height=300)   # sizing 
+
+# Label
+my_label = tkinter.Label(text="Labella",font=("Arial",24,"bold"))
+my_label.pack()                         # text wont be visible untill it is packed
+
+
+
+window.mainloop()                       # without this the window will be closed instantly
+                                        # should be placed in the bottom of the code 
+
+
+
+## 206
+
+Kwargs = keyword arguments
+
+parameters even though they are not listed in the list of properties we are able to use them
+just by typing them in 
+
+advanced python arguments
+
+arguments with default values
+so when creating a function, jujst assign them values
+
+and when the default values need to be changed, it can be modified when calling the function
+
+eg : 
+def my_function(a=1,b=2,c=3):
+    # Do this with a 
+    # Do this with b
+    # Do this with c
+
+when calling 
+my_function(b=5)   # now the default value is overrided
+a and c will be the same default value 
+
+
+
+positional arguments are the required arguments 
+that needs to assigned to the function 
+
+
+What is the output of this code?
+
+def foo(a, b=4, c=6): 
+    print(a, b, c)
+ 
+foo(4, 9)
+
+output : 4 9 6
+only c get's default value
+
+
+
+
+
+207. *args : many positional arguments 
+
+def add(n1,n2):
+    return n1+n2 
+
+add(n1=5,n2=3)
+
+works for two arguments 
+
+
+unlimited arguments
+
+def add(*args):
+    for n in args:
+        print(n)
+
+args is not required it is just a variable name
+* tells python 
+the function can expect any number of arguments
+
+and then loop through the arguments of tuple
+
+add(3,5,7,8)
+
+
+
+
+
+208. **kwargs many keyword arguments
+calling by the name rather than the position
+
+def calculate(**kwargs):
+    print(kwargs)
+
+calculate(add=3, multiply=5)
+
+calculate()
+
+it is a dictionary
+{
+    "add" : 3,
+    "multiply" : 5
+}
+
+in tkinter module multiple properties in multiple functions are kept as kwargs
+
+for any thing to appear on the screen each component needs to be packed
+label, button
+
+
+all widgets
+
+text-entry-box for multiple lines of text.
+spinbox = counter
+
+scale
+
+checkbutton
+
+radiobutton
+
+listbox for choices
+
+
+
+3 layout managers
+
+Pack = packs each element next to each other(below the previous one)
+can be changed using side
+but moving it a bit up or down is lot more complicated
+
+
+
+Place = gives x and y values to the widgets (coordinates)
+if there are many widgets then it will be difficult to manage their positions
+
+
+
+Grid = has rows and columns
+it fill one by one
+like even if i assign first element in the column=5,row=5
+if the previous cells are not filled then the element will take the first spot
+even though the position is clerly specified
+
+cant use grid and pack in the same program
+
+
+if a widget is defined but layout is not specified then it wont be shown on the screen
+
+
+
+# Adding a little bit of padding around components
+directly modify the widgets 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from tkinter import *
+
+window = Tk()
+window.title("My first GUI Program")
+window.minsize(width=500, height=300)
+
+# Label
+my_label = Label(text="Labella",font=("Arial",24,"bold"))
+my_label.pack()
+
+my_label["text"] = "New Text"       # my_label is a dictionary **kwargs
+my_label.config(text="New Text")
+
+
+# Button
+
+def button_clicked():
+    print("I got clicked")
+    new_text = input.get()
+    my_label.config(text=input.get())
+
+button = Button(text="hell yeah", command=button_clicked) # command is just the name of the function
+button.pack()
+
+# Entry 
+
+input = Entry(width=10)
+input.pack()
+print(input.get())
+
+
+
+
+
+window.mainloop()
