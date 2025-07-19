@@ -1,0 +1,27 @@
+to put an image in the window
+know about canvas widget 
+
+foreground fg is the color that is belongs to the text and or the content 
+
+highlight thickness will determine the border thickness of the widget 
+
+the programs that are continously listening 
+these types of GUI programs are Event Driven
+
+
+there is an inbuilt function called after, - execute a command after a time delay
+
+
+window.after(1000, say_something, "hello", "little", "forkk") # in milli secs
+# it will print after 1sec in the output terminal
+
+
+Python Dynamic typing, changing text live, i mean stuff
+changing the data type in a variable, according to need
+
+eg:
+ # formatting for under 10 secs
+    if count_sec < 10:
+        count_sec = "0"+str(count_sec)       # f"0{count_sec}"
+
+
