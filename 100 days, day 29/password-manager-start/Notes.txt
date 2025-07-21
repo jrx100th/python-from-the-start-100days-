@@ -1,0 +1,14 @@
+damn just like the grid from css here is also a span element
+column span
+this columnspan keyword should be applied inside the grid function, at the end of the widget
+
+sticky is used on the grid not on the widget when creating it
+
+
+Standard dialogs.
+message box module
+
+
+the ability to put strings in the clipboard
+basically copying stuff to clipboard
+through pyperclip
