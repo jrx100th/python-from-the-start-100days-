@@ -1,0 +1,228 @@
+Errors, exceptions, and JSON data
+
+JSON = Data format for transferring data across the internet between applications
+
+if i try to open a file that doesnt exist then it will throw an error
+
+
+# if i try to open a file that doesnt exist then it will throw an error
+# filenotfound error
+
+# FileNotFound
+# with open("a_file.txt") as file:
+#     file.read()
+
+# KeyError
+# a_dictionary = {"key" : "value"}
+# value = a_dictionary["non_existent_key"]
+
+# IndexError
+# fruit_list = ["Apple","Banana","Pea"]
+# print(fruit_list[3])
+
+# TypeError
+# text = "abc"
+# print(text+5)
+
+# catching exceptions
+
+"""
+
+try : Something that might cause an exception
+except: Do this if there was an exception
+else: Do this if there were no exceptions
+finally:Do this no matter what happens
+
+"""
+
+
+if the exception is raised then the new file is created
+try:
+    file = open("af.txt")
+except:
+    # print("There was an error")
+    file = open("af.txt","w")
+
+
+
+but in this scenario it doesnt catch the error from the a_dictionary, it just goes straight toward the except block
+try:
+    file = open("af.txt")
+    a_dict = {"key":"value"}
+    print(a_dict["sddfef"])
+except:
+    # print("There was an error")
+    file = open("af.txt","w")
+
+
+so now we are specifying the error for the block
+
+
+try:
+    file = open("af.txt")
+    a_dict = {"key":"value"}
+    print(a_dict["sddfef"])
+except FileNotFound:
+    # print("There was an error")
+    file = open("af.txt","w")
+
+
+
+
+
+# FileNotFound
+
+try:
+    file = open("af.txt")
+    a_dict = {"key":"value"}
+    print(a_dict["sddfef"])
+except FileNotFoundError:
+    # print("There was an error")
+    file = open("af.txt","w")
+    file.write("loreum ipsum")
+# except KeyError:
+#     print("That key does not exist.")
+# catching key error
+except KeyError as error_message:
+    print(f"That key {error_message} does not exist.")
+
+else :  # when no error are found
+    content = file.read()
+    print(content)
+finally:
+    file.close()# doesnt make sense for the first time when there is no file opened to close or no file exists
+    print("file closed")
+
+# these 4 will be in the flow
+
+
+
+
+
+
+
+
+Raising you own exceptions
+
+raise keyword
+
+finally:
+    # raise TypeError
+    raise KeyError("Fuck You")
+
+thats how you raise a error
+i wish i could raise i type error saying : You're not my type 
+
+eg
+
+height = float(input("Height : "))
+weight = int(input("Weight : "))
+
+if height > 3:
+    raise ValueError("Human height should not be over 3 meteres.")
+
+bmi = weight/(height*height)
+print(bmi)
+
+
+
+JSON stands for javascript Object Notation
+designed for javascript
+
+since it easier to understand it has been adopted by many languges 
+
+it is similar to bunch of nested lists and dictionaries
+
+to work with json data in python
+
+write : json.dump()
+read  : json.load()
+update: json.update()
+
+
+
+
+writes data 
+with open("data.json",mode = "w") as data_file:
+    json.dump(new_data, data_file, indent=4)
+    # new data is the data that has to be updated to the data.json 
+
+
+reads data
+with open("data.json", mode = "r") as data_file:
+data = json.load(data_file)
+print(data)
+
+updates data again in write mode
+if (len(web_entry.get()) == 0) or (len(pass_entry.get()) == 0) or (len(usn_entry.get()) == 0):
+    messagebox.showinfo(title="Warning",message="Please make sure you didnt leave any fields empty")
+else:    # goes back to continue 
+    with open("data.json", mode="r") as data_file:
+        data = json.load(data_file)
+        data.update(new_data)       # update new data to existing file
+
+    with open("data.json", mode="w") as data_file:  # opening in write mode
+        json.dump(data, data_file, indent=4)
+
+
+
+
+
+from the password manager gui main.py
+def save_current_data():
+    current_data = f"Website : {web_entry.get()}\nUsername/Email : {usn_entry.get()}\nPassword : {pass_entry.get()}\n========================\n========================\n"
+
+    new_data = {
+        web_entry.get() : {
+            "email" : usn_entry.get(),
+            "password" : pass_entry.get()
+        }
+    }
+
+    if (len(web_entry.get()) == 0) or (len(pass_entry.get()) == 0) or (len(usn_entry.get()) == 0):
+        messagebox.showinfo(title="Warning",message="Please make sure you didnt leave any fields empty")
+    else:    # goes back to continue 
+        with open("data.json", mode="r") as data_file:
+            # json.dump(new_data, data_file, indent=4)
+
+            # data = json.load(data_file)
+            # print(data)    # prints complete data in the json file
+            # print(type(data))     # prints class dict
+
+            data = json.load(data_file)
+            # updating old data with new data
+            data.update(new_data)
+
+        with open("data.json","w") as datafile:
+            # saving updated data
+            json.dump(data, data_file, indent=4)
+
+
+
+ if (len(web_entry.get()) == 0) or (len(pass_entry.get()) == 0) or (len(usn_entry.get()) == 0):
+        messagebox.showinfo(title="Warning",message="Please make sure you didnt leave any fields empty")
+    else:    # goes back to continue 
+        with open("data.json", mode="r") as data_file:
+            data = json.load(data_file)
+            data.update(new_data)       # update new data to existing file
+
+        with open("data.json", mode="w") as data_file:  # opening in write mode
+            json.dump(data, data_file, indent=4)
+
+            web_entry.delete(0,END)
+            pass_entry.delete(0,END)
+            usn_entry.delete(0,END)
+
+
+
+
+
+
+
+for some features in python modules
+it is different for windows and macos
+
+like the size of the button or the units and columnspan rules
+
+actually jsondecoder is not taught in the course
+from web i got it when testing and then caught it
