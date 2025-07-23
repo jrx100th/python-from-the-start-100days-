@@ -1,0 +1,1 @@
+frequency dictionary = based on the occurence in the common usage 
