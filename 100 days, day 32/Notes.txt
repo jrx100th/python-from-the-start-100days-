@@ -1,0 +1,163 @@
+245. How to Send emails using SMTP
+
+BTS
+
+after the receiver logs in to the site, then it will be downloaded
+for doing this it relies on SMTP
+simple mail transfer protocol
+
+smtplib is the python code
+
+
+import smtplib
+
+my_email = "gm"
+password = "v" # app password
+
+# creating a connection through the server
+connection = smtplib.SMTP("smtp.gmail.com",587)
+
+# TLS stand for transport layer security  # way of securing our connection to our email server # encrypting our mail
+connection.starttls()
+connection.login(user=my_email, password=password)
+connection.sendmail(from_addr=my_email, to_addrs="jeil.com", msg="Hello there!!")
+connection.close()
+
+working perfectly fine after including port 587.
+havent included subject for the email
+
+connection.sendmail(from_addr=my_email, to_addrs="jil.com", msg="Subject:HBD\n\nHello there!!\nThis is body of my email.")
+this will just include the subject 
+
+
+just like opening a file we are also opening a connection
+so similarly we can use the with keyword to automatically close the connection 
+
+
+import smtplib
+
+my_email = "gail.com"
+password = "vkwv" # app password
+
+# creating a connection through the server
+with (smtplib.SMTP("smtp.gmail.com",587)) as connection:
+
+    # TLS stand for transport layer security  # way of securing our connection to our email server # encrypting our mail
+    connection.starttls()
+    connection.login(user=my_email, password=password)
+    connection.sendmail(
+        from_addr=my_email, 
+        to_addrs="jl.com", 
+        msg="Subject:HBD\n\nHello there!!\nThis is body of my email."
+        )
+
+
+now it looks a lot more neet 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+246. Working with python datetime module 
+
+import datetime as dt
+
+now = (dt.datetime.now()) # will get the current dat and time
+
+print(type(now))
+<class 'datetime.datetime'>
+print(now)
+2025-07-25 22:13:58.908415
+
+print(now.year)
+print(now.month)
+print(now.weekday())
+print(now.date())
+
+computer start counting from 0
+and if it is 1 then it is tuesday
+
+i mean their week starts from monday 
+
+
+
+
+247. Challenge 1 Monday Motivation Quote
+
+
+import datetime as dt
+import random
+import smtplib
+
+now = dt.datetime.now()
+day = now.weekday()
+
+# print(day)
+
+with open(r"C:\Usees.txt", mode="r") as quotes:
+    quotes_list = quotes.readlines()
+
+todays_quote = random.choice(quotes_list)
+
+my_email = "ch5ad5n"
+pwd = "e5d4wf
+swt"
+
+if day == 4:
+    with smtplib.SMTP("smtp.gmail.com",587) as connection:
+        connection.starttls()
+        connection.login(user=my_email, password=pwd)
+        connection.sendmail(
+            from_addr=my_email,
+            to_addrs=my_email,
+            msg=f"Subject:Testing Motivation\n\n{todays_quote}"
+            )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+248. Automated Birthday wisher Project challenge 
+
+
+
+249. Running the code on cloud 
+
+using pythonanywhere.com
+for free 
+
+
+just change the absolute file path to relative file path when uploading to cloud
+i wont do it now, as i feel this is not necessary to host
+maybe a playable game on a website may work
+ in free tier you can only run one task at a time.
+
+
+
+
+
+
+
+
+
+
+college mailid : e**************
+g5 : v****************
