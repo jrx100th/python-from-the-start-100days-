@@ -1,0 +1,135 @@
+
+college mailid : jvp
+gj157 : vkv
+
+251. 
+Goal ISS tracker
+
+API = set of commands functions protocols and objects.
+      that programmers can use to create software or interact with an external system.
+
+
+252. What are API's
+
+barriers between 
+our program and external system
+
+making a request to external system, for some data
+structuring the data for request
+then they will respond with required data 
+
+if the request is not structured then the req will be denied
+
+API is the interface between the website and us 
+like a menu in restaurant 
+
+
+
+
+
+
+253. API endpoints and making API calls
+
+API endpoint = location @ where data is stored
+so basically it is just a url
+
+we also have to make an API request 
+
+ISS current location API
+
+returns the output based on a JSON
+
+
+import requests  # for working with API's
+
+response = requests.get(url="http://api.open-notify.org/iss-now.json")
+#getting a response from the link
+print(response.text)# prints the contents from the response 
+
+but
+print(repsonse) # will give a response code
+that determines whether the
+
+
+
+
+
+254. Working with Responses: HTTP codes, exceptions and JSON data 
+
+response codes = if the request suceeded or failed
+
+404 = stuff doesnt exist
+
+
+1XX : Hold on
+2XX : Success, you will get the data you expected
+3XX : Dont have permission
+4XX : stuff doesn't exist
+5XX : Server problem
+
+response.status_code = gets the status code
+
+response = requests.get(url="http://api.open-notify.org/iss-now.json")
+if response.status_code == 404:
+    raise Exception("That resouce does not exist.")
+elif response.status_code == 401:
+    raise Exception("You are not authorized to access this data.")
+
+raising an exception when there is an error, a speecific one.
+
+so requests module will generate these for us 
+
+response.raise_for_status()
+will raise the appropriate error for us 
+
+data = response.json()
+print(data)
+gives the json data
+
+and just like a dictionary we will get the data out of it.
+data["iss_position"]
+{'latitude': '-18.5510', 'longitude': '72.8386'}
+
+print(data["iss_position"]["latitude"])
+-15.6258
+
+
+
+
+
+256. Understanding API parameters : Match sunset times with the current times
+
+parameters 
+give input to get different pieces of data 
+
+some api allow you to provide parameters
+eg :
+sunrise-sunset.org/api 
+
+we have to provide out latitude and longitude
+
+in api documentation, we have to structure the data 
+here : lat and lng are required
+others are optional
+so the optional parameters all have a default value 
+
+here endpoint is
+https://api.sunrise-sunset.org/json 
+
+and the parameters need to be given in the form of dictionary
+
+response = requests.get(sun, params=parameters)
+sun is the url and 
+parameters are the parameters dictionary
+parameters = { 
+    "lat" : MY_LAT,
+    "lng" : MY_LONG
+}
+
+to view the result in the web browser
+then 
+api+"?lat="MY_LAT+"&lng="+MY_LONG
+
+https://api.sunrise-sunset.org/json?lat=MY_LAT&lng=MY_LONG
+
+THEn the complete data will be displayed in the web browser
