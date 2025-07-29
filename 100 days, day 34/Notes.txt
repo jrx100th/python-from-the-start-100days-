@@ -1,0 +1,46 @@
+261. Unescaping HTML elements
+
+so basically we are just replacing the particular HTML elements as a human readable text
+
+&quot to single quotes
+etc more can be found in https://www.w3schools.com/html/html_entities.asp
+
+to unscape in python 
+we have to import HTML module
+and use 
+html.unescape(parameters)
+
+so after using it on a text then the text has been unescaped, means it is completely human readable 
+
+
+
+
+
+
+
+
+
+
+264. Python typing 
+
+we can set the data types of a variable before giving it a value
+
+age : int
+
+age = 12 will be fine
+age = "12" will give an error
+
+same goes for the functions suring init
+
+def func1(name: str)
+will only take a string
+
+def func(name : ui_class)
+will take the object from ui_class 
+
+
+similarly we can address or assign a return type of the functions
+
+def police_check(age : int) -> bool
+means it should return a boolean
+if we return a string, then it will raise a typeError
