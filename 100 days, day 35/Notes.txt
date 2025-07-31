@@ -135,7 +135,7 @@ give weather updates for every 3 hours = 8 weather forecasts per day
 
 protip : always use the website with the https
 
-site_full = https://api.openweathermap.org/data/2.5/forecast?lat=23.0430&lon=76.5135&appid=1e74ab30bfdbd6085330136254c7cc85
+site_full = https://api.openweathermap.org/data/2.5/forecast?lat=23.0430&lon=76.5135&appid=1e74ab30b**************
 
 api_endpoint is everything upto '?'
 
