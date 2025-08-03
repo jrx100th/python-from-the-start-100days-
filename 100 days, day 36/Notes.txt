@@ -1,0 +1,51 @@
+Stock news monitoring
+
+professional stock traders have access to a bloomberg terminal
+and provides you with company stock prices and the company news 
+with good news the stock price goes up
+bad news = price down 
+and alert people
+to subscribe to these terminals will cost 24000USD/year
+
+Lets DIY our own bloomberg terminal
+website = tradingview.com 
+
+we can check each company stocks over different times
+change the time zone to exchange = the time of stock exchange 
+view 1 day view 
+
+when getting data on market open and close
+we can get the data when the market opens and market closes
+
+trading view is a terminal
+and it gives us the information for analyzing 
+information is news from companies like reuter etc
+
+python program to trade stocks 
+1. stock prices for a company using an API = pulling in yesterdays closing price and previous day closing price 
+yesterday cp = 1000usd
+previous  cp = 900usd 
+diff         = 100
+direction    = up
+percentage rise = 100/900
+
+on previous it is 10% lower than yesterday 
+we will set a program to detect this significant change and then inform back(callback)
+lets put that change for 10% 
+
+2. API to fetch out relevant news 
+so it will give the reason for the change of the stock price 
+
+3. send our selves a message
+so that we can decide on selling our stock or buying new ones.
+
+so we have to read the API documentation by ourselves and figure out what to documentation
+and then decide 
+
+i think 
+yesterday's closing price vs. today's opening price.
+is way better than angela strategy
+since i choosed extra hard(accidentally), i will have some liberty to whatever i want
+
+for api keys
+everything upto and not including the question mark 
