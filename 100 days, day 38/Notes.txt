@@ -1,0 +1,45 @@
+286. 
+Exercise tracking application using python and google sheets 
+
+track workout 
+what time
+duration
+calories burnt 
+
+in google sheets 
+date time Exercise duration calories 
+time should either be mentioned or it needs to be calculated from average 
+calories should be calculated automatically
+
+using python DateTime strftime() method
+APIs and making post requests 
+Authorization headers
+environment variables 
+
+
+
+using temp mail for email id 
+
+mail     : m********************m
+password : d****************5
+username : M*******o
+
+
+application: D**********o
+application ID : f******6
+
+api_key : b******************************7	
+
+
+
+
+
+
+
+
+
+
+https://requests.readthedocs.io/en/latest/user/authentication/#basic-authentication
+
+from requests.auth import HTTPBasicAuth
+basic = HTTPBasicAuth('user','pass')
