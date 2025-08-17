@@ -1,0 +1,78 @@
+293. 
+
+Part 1
+for personel use
+
+part 2
+adding up users 
+
+1. google sheet to track the place and the price cutoff(low price)
+2. from google sheet all the locations and lowest prices
+and put them in flight search api and looking for cheapest price in the next 6 months.
+3. when it gets a price that is less than the cut off price, then it will send us a message(i will use email)
+    send the date and price to us 
+
+Google sheets need to have 
+City 
+IATA Code
+Lowest Price 
+
+
+
+
+
+
+
+
+Amadeus creds 
+
+email : forek97546@gardsiir.com
+fName : Farhan
+lName : Khan
+country : india
+Business Area : Travel Agency/Online travele agency
+password : S4e#$548%&^*eF9e
+
+now login(try to) 
+authenticate
+then active the account
+
+
+
+
+
+
+
+
+
+
+
+Making of the application 
+
+Remember that the API Key and API Secret are for personal use only. Do not share them with anyone.
+
+app dashboard at 
+https://developers.amadeus.com/my-apps/Flight%20Price%20Tracker?userId=forek97546@gardsiir.com
+
+API Key : A1FtTGAVGAi1uGTo4YopFLXeILD1jhnx
+API Secret : bEkGDkMqzNybyonH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SHEETY creds
+Username = JRX
+Password = flightPriceTracker
+
+
+contentType : Application/Json
