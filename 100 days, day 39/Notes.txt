@@ -26,12 +26,12 @@ Lowest Price
 
 Amadeus creds 
 
-email : forek97546@gardsiir.com
-fName : Farhan
-lName : Khan
-country : india
+email : f**********************m
+fName : F*****
+lName : K****
+country : i********
 Business Area : Travel Agency/Online travele agency
-password : S4e#$548%&^*eF9e
+password : S**************e
 
 now login(try to) 
 authenticate
@@ -52,10 +52,10 @@ Making of the application
 Remember that the API Key and API Secret are for personal use only. Do not share them with anyone.
 
 app dashboard at 
-https://developers.amadeus.com/my-apps/Flight%20Price%20Tracker?userId=forek97546@gardsiir.com
+https://developers.amadeus.com/my-apps/F******************************************************
 
-API Key : A1FtTGAVGAi1uGTo4YopFLXeILD1jhnx
-API Secret : bEkGDkMqzNybyonH
+API Key : A*******************************x
+API Secret : b***************
 
 
 
@@ -73,6 +73,7 @@ API Secret : bEkGDkMqzNybyonH
 SHEETY creds
 Username = JRX
 Password = flightPriceTracker
+
 
 
 contentType : Application/Json
