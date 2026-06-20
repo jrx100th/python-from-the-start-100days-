@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}JENIT • ENTER DOOM{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex flex-col">
+    <!-- Top bar -->
+    <div class="border-b-4 border-[#5a4636] bg-[#2a1f17] px-6 py-3 flex items-center justify-between text-xl">
+        <div class="flex items-center gap-x-3">
+            <div class="w-9 h-9 bg-[#9d2a1f] flex items-center justify-center text-white text-3xl font-bold border-2 border-[#c9b38a]">J</div>
+            <div>
+                <span class="text-[#c9b38a] text-4xl tracking-wider">JENIT</span>
+                <span class="text-[#9d2a1f] text-3xl">DOOM</span>
+            </div>
+        </div>
+        <div class="flex items-center gap-x-8 text-sm">
+            <a href="#story" class="hover:text-white transition">THE STORY</a>
+            <a href="#skills" class="hover:text-white transition">ARSENAL</a>
+            <a href="/doom" class="px-5 py-1 bg-[#9d2a1f] hover:bg-[#c33a2a] text-white border border-[#c9b38a] transition">PLAY NOW</a>
+        </div>
+    </div>
+
+    <!-- Hero / Title -->
+    <div class="flex-1 flex items-center justify-center px-6 relative overflow-hidden crt" style="background: linear-gradient(#1a120b, #2a1f17);">
+        <div class="max-w-5xl text-center relative z-10">
+            <!-- Big DOOM style title -->
+            <div class="mb-2">
+                <span class="block text-[92px] md:text-[120px] leading-none font-bold tracking-[-4px] text-[#c9b38a] doom-text" 
+                      style="text-shadow: 6px 6px 0 #000, -2px -2px 0 #000;">
+                    DOOM
+                </span>
+                <span class="block text-5xl -mt-6 text-[#9d2a1f] tracking-[8px]">1996 REINCARNATED</span>
+            </div>
+
+            <div class="text-2xl md:text-3xl text-[#c9b38a] mb-8">A first-person shooter experience by Jenit</div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/doom" 
+                   class="group inline-flex items-center justify-center gap-x-3 px-10 py-5 text-4xl border-4 border-[#c9b38a] bg-[#9d2a1f] hover:bg-[#c33a2a] text-white transition-all active:scale-[0.985]">
+                    <span>ENTER THE DEMONIC REALM</span>
+                </a>
+                
+                <a href="#story" 
+                   class="inline-flex items-center justify-center px-8 py-5 text-2xl border-4 border-[#5a4636] hover:bg-[#2a1f17] transition">
+                    READ THE LORE
+                </a>
+            </div>
+
+            <div class="mt-10 text-[#8a6646] text-sm tracking-widest">MOUSE + WASD/ARROWS • CLICK TO SHOOT • ESC TO PAUSE</div>
+        </div>
+
+        <!-- Retro decorative elements -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-8 text-xs opacity-60">
+            <div>SKILL LEVEL: ULTRA-VIOLENCE</div>
+            <div>EPISODE 1: KNEEL BEFORE ME</div>
+        </div>
+    </div>
+
+    <!-- Story / About Section -->
+    <div id="story" class="border-t-4 border-[#5a4636] bg-[#2a1f17] px-6 py-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="uppercase tracking-[4px] text-[#9d2a1f] text-xl mb-2">EPISODE I</div>
+            <h2 class="text-6xl tracking-tighter text-[#c9b38a] mb-6">The Invasion Has Begun</h2>
+            
+            <div class="grid md:grid-cols-2 gap-x-16 gap-y-8 text-[21px] leading-tight">
+                <div class="space-y-5 text-[#b39b74]">
+                    <p>You are Jenit, a battle-hardened developer who was pulled through a portal while debugging a particularly cursed deployment at 3:17 AM.</p>
+                    <p>The demons have taken over the servers. Your only hope is your keyboard, mouse, and an ancient .wad file that somehow survived the incident.</p>
+                </div>
+                <div class="space-y-5 text-[#b39b74]">
+                    <p>Now you must fight through procedurally generated hellscapes using pure raycasted technology — no Unity, no Unreal, just math, canvas, and raw determination.</p>
+                    <p>Survive. Kill everything that moves. Escape back to the world of clean commits and Tailwind.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arsenal / Skills -->
+    <div id="skills" class="border-t-4 border-[#5a4636] px-6 py-14 bg-[#1a120b]">
+        <div class="max-w-5xl mx-auto">
+            <div class="uppercase tracking-[4px] text-[#9d2a1f] text-xl mb-3">YOUR WEAPONS</div>
+            <h3 class="text-5xl mb-8 text-[#c9b38a]">Arsenal of Code</h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-lg">
+                <div class="retro-border p-5 bg-[#2a1f17]">
+                    <div class="text-[#9d2a1f] text-3xl mb-1">01</div>
+                    <div class="font-bold text-2xl">Python + Flask</div>
+                    <div class="text-sm text-[#8a6646]">Backend from the depths</div>
+                </div>
+                <div class="retro-border p-5 bg-[#2a1f17]">
+                    <div class="text-[#9d2a1f] text-3xl mb-1">02</div>
+                    <div class="font-bold text-2xl">JavaScript Canvas</div>
+                    <div class="text-sm text-[#8a6646]">Pure raycasting engine</div>
+                </div>
+                <div class="retro-border p-5 bg-[#2a1f17]">
+                    <div class="text-[#9d2a1f] text-3xl mb-1">03</div>
+                    <div class="font-bold text-2xl">Jinja2 Templating</div>
+                    <div class="text-sm text-[#8a6646]">Dynamic demonic pages</div>
+                </div>
+                <div class="retro-border p-5 bg-[#2a1f17]">
+                    <div class="text-[#9d2a1f] text-3xl mb-1">04</div>
+                    <div class="font-bold text-2xl">VT323 + Tailwind</div>
+                    <div class="text-sm text-[#8a6646]">Retro-futuristic UI</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Big Play Button Footer -->
+    <div class="bg-[#9d2a1f] text-center py-8 border-t-4 border-[#c9b38a]">
+        <a href="/doom" 
+           class="inline-block text-white text-5xl px-16 py-3 border-4 border-[#c9b38a] hover:bg-[#c33a2a] active:translate-y-0.5 transition">
+            START THE SLAUGHTER →
+        </a>
+        <div class="text-[#f3d9b0] text-sm mt-3 tracking-widest">PRESS ENTER OR CLICK ABOVE TO BEGIN</div>
+    </div>
+</div>
+{% endblock %}

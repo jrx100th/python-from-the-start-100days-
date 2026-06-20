@@ -1,0 +1,53 @@
+/* DOOM Clone - Additional Retro Styles */
+
+body {
+    font-family: "VT323", "Courier New", monospace;
+    background: #1a120b;
+    color: #c9b38a;
+}
+
+#game-canvas {
+    display: block;
+    background: #000;
+}
+
+#minimap {
+    image-rendering: crisp-edges;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+}
+
+.retro-border {
+    border: 4px solid #5a4636;
+    box-shadow: 0 0 0 4px #2a1f17;
+}
+
+/* Custom scrollbar for any future panels */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #5a4636;
+}
+
+/* Game overlay text */
+#overlay-title {
+    text-shadow: 
+        4px 4px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000;
+}
+
+#overlay-subtitle {
+    text-shadow: 2px 2px 0 #000;
+}
+
+/* Weapon bob when moving */
+.weapon.bobbing {
+    animation: weapon-bob 420ms linear infinite;
+}
+
+@keyframes weapon-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(9px); }
+}

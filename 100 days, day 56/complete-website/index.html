@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jenit — Software Developer & Designer. Crafting beautiful digital experiences with code.">
+    <meta name="theme-color" content="#0f172a">
+    <title>Jenit • Developer &amp; Designer</title>
+    
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased">
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-6 md:px-10 flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-inner">
+                        <span class="font-bold text-white text-xl tracking-tighter">J</span>
+                    </div>
+                    <div>
+                        <span class="font-semibold tracking-tight text-xl">Jenit</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="#about" class="nav-link text-slate-300 hover:text-white transition">About</a>
+                    <a href="#skills" class="nav-link text-slate-300 hover:text-white transition">Skills</a>
+                    <a href="#projects" class="nav-link text-slate-300 hover:text-white transition">Projects</a>
+                    <a href="#journey" class="nav-link text-slate-300 hover:text-white transition">Journey</a>
+                    <a href="#contact" class="nav-link text-slate-300 hover:text-white transition">Contact</a>
+                </div>
+
+                <!-- Actions -->
+                <div class="hidden md:flex items-center gap-x-3">
+                    <a href="#contact" 
+                       class="px-5 py-2.5 rounded-2xl text-sm font-semibold border border-white/20 hover:bg-white/5 transition">
+                        Say hello
+                    </a>
+                    <a href="https://drive.google.com/file/d/1fake-resume-link/view" target="_blank"
+                       class="btn-primary px-5 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-x-2 text-white">
+                        <span>Resume</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7-7 7M5 12h14" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-slate-300 hover:text-white rounded-2xl border border-white/10 hover:bg-white/5"
+                        aria-label="Toggle menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-slate-900 border-t border-white/10 px-6 py-6">
+                <div class="flex flex-col text-base font-medium gap-y-1">
+                    <a href="#about" class="py-3 px-4 rounded-2xl hover:bg-white/5">About</a>
+                    <a href="#skills" class="py-3 px-4 rounded-2xl hover:bg-white/5">Skills</a>
+                    <a href="#projects" class="py-3 px-4 rounded-2xl hover:bg-white/5">Projects</a>
+                    <a href="#journey" class="py-3 px-4 rounded-2xl hover:bg-white/5">Journey</a>
+                    <a href="#contact" class="py-3 px-4 rounded-2xl hover:bg-white/5">Contact</a>
+                    
+                    <div class="pt-3 border-t border-white/10 mt-3 flex flex-col gap-y-3">
+                        <a href="#contact" class="py-3.5 px-4 text-center rounded-3xl border border-white/20 font-semibold">Say hello</a>
+                        <a href="https://drive.google.com/file/d/1fake-resume-link/view" target="_blank"
+                           class="btn-primary py-3.5 px-4 text-center rounded-3xl font-semibold">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO / LANDING -->
+    <header id="hero" class="hero-bg pt-20 min-h-[100dvh] flex items-center relative overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-10 pt-12 pb-24">
+            <div class="max-w-4xl">
+                <!-- Greeting badge -->
+                <div class="inline-flex items-center gap-x-2 rounded-full bg-white/5 border border-white/10 pl-3 pr-4 py-1 text-sm mb-7">
+                    <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                    <span class="font-medium text-slate-300">Currently open to exciting opportunities</span>
+                </div>
+
+                <h1 class="hero-title text-7xl md:text-7xl lg:text-8xl font-semibold tracking-tighter leading-[.92]">
+                    Hi, I'm Jenit.<br>
+                    <span class="hero-gradient-text">I build things</span><br>
+                    that feel alive.
+                </h1>
+
+                <p class="mt-7 max-w-lg text-xl text-slate-300">
+                    Full-stack developer and product designer based in India.<br>
+                    I craft delightful digital experiences at the intersection of design and code.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="mt-9 flex flex-wrap items-center gap-4">
+                    <a href="#projects"
+                       class="btn-primary inline-flex items-center gap-x-3 px-8 py-4 rounded-3xl text-lg font-semibold text-white shadow-xl shadow-indigo-950/60">
+                        See my work
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                    <a href="#contact"
+                       class="inline-flex items-center gap-x-3 px-8 py-4 rounded-3xl text-lg font-medium border border-white/20 hover:bg-white/5 transition">
+                        Let's talk
+                    </a>
+                </div>
+
+                <!-- Social / Trust signals -->
+                <div class="mt-12 flex items-center gap-x-6">
+                    <div class="flex -space-x-2">
+                        <div class="w-7 h-7 rounded-full ring-2 ring-slate-950 overflow-hidden"><img src="https://picsum.photos/id/1005/28/28" alt=""></div>
+                        <div class="w-7 h-7 rounded-full ring-2 ring-slate-950 overflow-hidden"><img src="https://picsum.photos/id/1011/28/28" alt=""></div>
+                        <div class="w-7 h-7 rounded-full ring-2 ring-slate-950 overflow-hidden"><img src="https://picsum.photos/id/201/28/28" alt=""></div>
+                    </div>
+                    <div class="text-sm text-slate-400">
+                        Featured in <span class="font-medium text-slate-200">Product Hunt</span>, <span class="font-medium text-slate-200">Indie Hackers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center text-xs tracking-[3px] text-slate-500">
+            SCROLL TO BEGIN
+            <div class="h-8 w-px bg-gradient-to-b from-transparent via-slate-700 to-transparent mt-2"></div>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="absolute top-1/3 right-10 hidden xl:block">
+            <div class="floating w-16 h-16 border border-white/10 rounded-3xl"></div>
+        </div>
+        <div class="absolute bottom-16 right-20 hidden xl:block">
+            <div class="w-7 h-7 rounded-full border border-white/20"></div>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-screen-2xl mx-auto px-6 md:px-10 pt-16 pb-24 border-t border-white/10">
+        <div class="grid lg:grid-cols-12 gap-x-16 gap-y-12 items-center">
+            <!-- Text Content -->
+            <div class="lg:col-span-7">
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-indigo-400 mb-3">CHAPTER 01 — WHO I AM</div>
+                <h2 class="text-6xl md:text-6xl font-semibold tracking-tighter section-title">A builder at heart.</h2>
+                
+                <div class="mt-8 text-xl text-slate-300 max-w-2xl space-y-6">
+                    <p>I've been obsessed with creating interfaces and systems that feel magical for over seven years. 
+                    From building beautiful marketing sites to complex SaaS platforms used by thousands, I care deeply about craft, performance, and the human experience.</p>
+                    
+                    <p>Currently, I split my time between leading product initiatives at a climate tech startup and shipping my own indie experiments that push creative boundaries.</p>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <div class="px-6 py-3 rounded-2xl bg-white/5 border border-white/10">
+                        <span class="block text-xs tracking-widest text-slate-400">BASED IN</span> 
+                        <span class="font-semibold">Bengaluru, India</span>
+                    </div>
+                    <div class="px-6 py-3 rounded-2xl bg-white/5 border border-white/10">
+                        <span class="block text-xs tracking-widest text-slate-400">AVAILABILITY</span> 
+                        <span class="font-semibold text-emerald-400">Open to select freelance + full-time roles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image / Stats card -->
+            <div class="lg:col-span-5">
+                <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                    <img src="https://picsum.photos/id/1005/800/920" alt="Jenit — portrait" class="w-full aspect-[4/4.2] object-cover">
+                    
+                    <!-- Floating accent card -->
+                    <div class="absolute bottom-6 left-6 right-6 glass rounded-2xl p-5 text-sm">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="font-semibold">When I'm not coding</div>
+                                <div class="text-slate-400 text-xs mt-px">I climb, photograph, and write about design systems</div>
+                            </div>
+                            <div class="text-4xl opacity-60">🏔️</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 border border-white/10 rounded-3xl p-px mt-14">
+            <div class="bg-slate-900 rounded-[22px] px-8 py-7">
+                <div class="stat-number text-5xl font-semibold tracking-tighter" data-count="7" data-suffix="+">0</div>
+                <div class="text-xs uppercase tracking-[2px] text-slate-400 mt-2">Years Experience</div>
+            </div>
+            <div class="bg-slate-900 rounded-[22px] px-8 py-7">
+                <div class="stat-number text-5xl font-semibold tracking-tighter" data-count="42">0</div>
+                <div class="text-xs uppercase tracking-[2px] text-slate-400 mt-2">Projects Shipped</div>
+            </div>
+            <div class="bg-slate-900 rounded-[22px] px-8 py-7">
+                <div class="stat-number text-5xl font-semibold tracking-tighter" data-count="31000" data-suffix="+">0</div>
+                <div class="text-xs uppercase tracking-[2px] text-slate-400 mt-2">Users Reached</div>
+            </div>
+            <div class="bg-slate-900 rounded-[22px] px-8 py-7">
+                <div class="stat-number text-5xl font-semibold tracking-tighter" data-count="18">0</div>
+                <div class="text-xs uppercase tracking-[2px] text-slate-400 mt-2">Countries</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="max-w-screen-2xl mx-auto px-6 md:px-10 py-16 border-t border-white/10 bg-slate-900/60">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-indigo-400 mb-3">CHAPTER 02 — CRAFT</div>
+            <h2 class="text-5xl font-semibold tracking-tight">Tools I use to bring ideas to life</h2>
+            <p class="mt-3 text-slate-300 text-lg">I love learning new technologies, but these are the ones I reach for every single day.</p>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+            <!-- Skill badges -->
+            <div class="skill-badge px-5 py-4 rounded-3xl bg-slate-950 border border-white/10 flex items-center gap-x-3 group">
+                <div class="text-2xl">⚛️</div>
+                <div>
+                    <div class="font-semibold">React / Next.js</div>
+                    <div class="text-xs text-slate-400">Primary frontend framework</div>
+                </div>
+            </div>
+            <div class="skill-badge px-5 py-4 rounded-3xl bg-slate-950 border border-white/10 flex items-center gap-x-3 group">
+                <div class="text-2xl">🌀</div>
+                <div>
+                    <div class="font-semibold">Tailwind CSS</div>
+                    <div class="text-xs text-slate-400">Design systems &amp; rapid UI</div>
+                </div>
+            </div>
+            <div class="skill-badge px-5 py-4 rounded-3xl bg-slate-950 border border-white/10 flex items-center gap-x-3 group">
+                <div class="text-2xl">🐍</div>
+                <div>
+                    <div class="font-semibold">Python + FastAPI</div>
+                    <div class="text-xs text-slate-400">Backend &amp; data services</div>
+                </div>
+            </div>
+            <div class="skill-badge px-5 py-4 rounded-3xl bg-slate-950 border border-white/10 flex items-center gap-x-3 group">
+                <div class="text-2xl">📱</div>
+                <div>
+                    <div class="font-semibold">React Native / Expo</div>
+                    <div class="text-xs text-slate-400">Cross-platform mobile apps</div>
+                </div>
+            </div>
+            <div class="skill-badge px-5 py-4 rounded-3xl bg-slate-950 border border-white/10 flex items-center gap-x-3 group">
+                <div class="text-2xl">✍️</div>
+                <div>
+                    <div class="font-semibold">Figma</div>
+                    <div class="text-xs text-slate-400">Interface design &amp; prototyping</div>
+                </div>
+            </div>
+            <div class="skill-badge px-5 py-4 rounded-3xl bg-slate-950 border border-white/10 flex items-center gap-x-3 group">
+                <div class="text-2xl">🔷</div>
+                <div>
+                    <div class="font-semibold">TypeScript</div>
+                    <div class="text-xs text-slate-400">Type-safe applications</div>
+                </div>
+            </div>
+            <div class="skill-badge px-5 py-4 rounded-3xl bg-slate-950 border border-white/10 flex items-center gap-x-3 group">
+                <div class="text-2xl">🗄️</div>
+                <div>
+                    <div class="font-semibold">PostgreSQL + Prisma</div>
+                    <div class="text-xs text-slate-400">Databases &amp; ORM</div>
+                </div>
+            </div>
+            <div class="skill-badge px-5 py-4 rounded-3xl bg-slate-950 border border-white/10 flex items-center gap-x-3 group">
+                <div class="text-2xl">🚀</div>
+                <div>
+                    <div class="font-semibold">Vercel / AWS</div>
+                    <div class="text-xs text-slate-400">Modern deployment</div>
+                </div>
+            </div>
+            <div class="skill-badge px-5 py-4 rounded-3xl bg-slate-950 border border-white/10 flex items-center gap-x-3 group">
+                <div class="text-2xl">🎨</div>
+                <div>
+                    <div class="font-semibold">Framer Motion</div>
+                    <div class="text-xs text-slate-400">Delightful motion design</div>
+                </div>
+            </div>
+            <div class="skill-badge px-5 py-4 rounded-3xl bg-slate-950 border border-white/10 flex items-center gap-x-3 group">
+                <div class="text-2xl">🧪</div>
+                <div>
+                    <div class="font-semibold">Testing &amp; DX</div>
+                    <div class="text-xs text-slate-400">Playwright, Vitest, Storybook</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-screen-2xl mx-auto px-6 md:px-10 py-20 border-t border-white/10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-x-6 gap-y-4 mb-9">
+            <div>
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-indigo-400 mb-3">CHAPTER 03 — SELECTED WORK</div>
+                <h2 class="text-5xl font-semibold tracking-tighter">Featured projects</h2>
+            </div>
+            <p class="text-lg text-slate-300 max-w-md">A selection of projects I’ve poured a lot of love into over the last few years.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2 mb-9">
+            <button data-filter="all" class="filter-btn active px-6 py-2 text-sm font-semibold border border-white/20 hover:border-white/40 rounded-3xl">All Projects</button>
+            <button data-filter="web" class="filter-btn px-6 py-2 text-sm font-semibold border border-white/20 hover:border-white/40 rounded-3xl">Web App</button>
+            <button data-filter="mobile" class="filter-btn px-6 py-2 text-sm font-semibold border border-white/20 hover:border-white/40 rounded-3xl">Mobile</button>
+            <button data-filter="design" class="filter-btn px-6 py-2 text-sm font-semibold border border-white/20 hover:border-white/40 rounded-3xl">Design Tool</button>
+            <button data-filter="ux" class="filter-btn px-6 py-2 text-sm font-semibold border border-white/20 hover:border-white/40 rounded-3xl">UI/UX</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+            
+            <!-- Project 1 -->
+            <div data-project="taskflow" data-categories="web" 
+                 class="project-card group bg-slate-900 border border-white/10 rounded-3xl overflow-hidden cursor-pointer focus:outline-none">
+                <div class="relative h-60">
+                    <img src="https://picsum.photos/id/1015/800/630" alt="TaskFlow project preview" class="w-full h-full object-cover">
+                    <div class="image-overlay absolute inset-0 flex items-end p-5">
+                        <div class="text-white/90 text-xs font-medium">Productivity • SaaS</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="font-semibold text-xl tracking-tight">TaskFlow</div>
+                        <div class="flex gap-1">
+                            <span class="project-tag bg-indigo-400/10 text-indigo-400">Web</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 line-clamp-2">Collaborative project management platform with real-time sync and beautiful reporting.</p>
+                    
+                    <div class="mt-5 flex items-center gap-2 text-xs">
+                        <span class="px-3 py-1 bg-white/5 rounded-full">React</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full">FastAPI</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full">+3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div data-project="pixelcraft" data-categories="design" 
+                 class="project-card group bg-slate-900 border border-white/10 rounded-3xl overflow-hidden cursor-pointer focus:outline-none">
+                <div class="relative h-60">
+                    <img src="https://picsum.photos/id/160/800/630" alt="PixelCraft vector design tool" class="w-full h-full object-cover">
+                    <div class="image-overlay absolute inset-0 flex items-end p-5">
+                        <div class="text-white/90 text-xs font-medium">Creative Tools</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="font-semibold text-xl tracking-tight">PixelCraft</div>
+                        <div class="flex gap-1">
+                            <span class="project-tag bg-violet-400/10 text-violet-400">Design</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 line-clamp-2">Lightning-fast browser-based vector design tool with collaborative cursors.</p>
+                    
+                    <div class="mt-5 flex items-center gap-2 text-xs">
+                        <span class="px-3 py-1 bg-white/5 rounded-full">React</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full">Canvas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div data-project="ecotrack" data-categories="mobile web" 
+                 class="project-card group bg-slate-900 border border-white/10 rounded-3xl overflow-hidden cursor-pointer focus:outline-none">
+                <div class="relative h-60">
+                    <img src="https://picsum.photos/id/201/800/630" alt="EcoTrack mobile app" class="w-full h-full object-cover">
+                    <div class="image-overlay absolute inset-0 flex items-end p-5">
+                        <div class="text-white/90 text-xs font-medium">Climate • Mobile</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="font-semibold text-xl tracking-tight">EcoTrack</div>
+                        <div class="flex gap-1">
+                            <span class="project-tag bg-teal-400/10 text-teal-400">Mobile</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 line-clamp-2">Mobile app that helps people understand and actively reduce their carbon footprint.</p>
+                    
+                    <div class="mt-5 flex items-center gap-2 text-xs">
+                        <span class="px-3 py-1 bg-white/5 rounded-full">React Native</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full">Expo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div data-project="devconnect" data-categories="web" 
+                 class="project-card group bg-slate-900 border border-white/10 rounded-3xl overflow-hidden cursor-pointer focus:outline-none">
+                <div class="relative h-60">
+                    <img src="https://picsum.photos/id/251/800/630" alt="DevConnect developer community" class="w-full h-full object-cover">
+                    <div class="image-overlay absolute inset-0 flex items-end p-5">
+                        <div class="text-white/90 text-xs font-medium">Community</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="font-semibold text-xl tracking-tight">DevConnect</div>
+                        <div class="flex gap-1">
+                            <span class="project-tag bg-indigo-400/10 text-indigo-400">Web</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 line-clamp-2">A focused social network where developers share side projects and find collaborators.</p>
+                    
+                    <div class="mt-5 flex items-center gap-2 text-xs">
+                        <span class="px-3 py-1 bg-white/5 rounded-full">Next.js</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full">Prisma</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div data-project="financedash" data-categories="web" 
+                 class="project-card group bg-slate-900 border border-white/10 rounded-3xl overflow-hidden cursor-pointer focus:outline-none">
+                <div class="relative h-60">
+                    <img src="https://picsum.photos/id/180/800/630" alt="FinanceDash personal finance" class="w-full h-full object-cover">
+                    <div class="image-overlay absolute inset-0 flex items-end p-5">
+                        <div class="text-white/90 text-xs font-medium">Fintech</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="font-semibold text-xl tracking-tight">FinanceDash</div>
+                        <div class="flex gap-1">
+                            <span class="project-tag bg-emerald-400/10 text-emerald-400">Web</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 line-clamp-2">Personal finance dashboard with real bank connections, smart budgeting, and beautiful charts.</p>
+                    
+                    <div class="mt-5 flex items-center gap-2 text-xs">
+                        <span class="px-3 py-1 bg-white/5 rounded-full">Vue</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full">Plaid</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div data-project="wanderlust" data-categories="ux design" 
+                 class="project-card group bg-slate-900 border border-white/10 rounded-3xl overflow-hidden cursor-pointer focus:outline-none">
+                <div class="relative h-60">
+                    <img src="https://picsum.photos/id/1005/800/630" alt="Wanderlust travel storytelling" class="w-full h-full object-cover">
+                    <div class="image-overlay absolute inset-0 flex items-end p-5">
+                        <div class="text-white/90 text-xs font-medium">Media • Travel</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="font-semibold text-xl tracking-tight">Wanderlust</div>
+                        <div class="flex gap-1">
+                            <span class="project-tag bg-rose-400/10 text-rose-400">UI/UX</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 line-clamp-2">Premium travel storytelling platform used by photographers and writers around the world.</p>
+                    
+                    <div class="mt-5 flex items-center gap-2 text-xs">
+                        <span class="px-3 py-1 bg-white/5 rounded-full">Astro</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full">Mapbox</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-9 text-center">
+            <a href="https://github.com/jenit" target="_blank" 
+               class="inline-flex items-center gap-x-2 text-sm font-medium px-6 py-3 hover:text-white text-slate-300 transition border-b border-transparent hover:border-white/40">
+                Explore more work on GitHub 
+                <span class="text-lg">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- JOURNEY / TIMELINE -->
+    <section id="journey" class="max-w-screen-2xl mx-auto px-6 md:px-10 py-20 border-t border-white/10">
+        <div class="max-w-4xl">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-indigo-400 mb-3">CHAPTER 04 — PATH SO FAR</div>
+            <h2 class="text-5xl font-semibold tracking-tighter">My journey in tech.</h2>
+        </div>
+
+        <div class="mt-14 max-w-3xl space-y-12">
+            <!-- Timeline items -->
+            <div class="timeline-item flex gap-7">
+                <div class="shrink-0 w-8">
+                    <div class="timeline-dot w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-indigo-500/10">
+                        <span class="text-[11px] font-bold text-white">25</span>
+                    </div>
+                </div>
+                <div class="pt-1">
+                    <div class="flex flex-wrap items-baseline gap-x-3">
+                        <span class="font-semibold text-xl">Senior Product Engineer @ Climora</span>
+                        <span class="text-xs px-3 py-px rounded bg-emerald-500/10 text-emerald-400 tracking-widest">2024 — NOW</span>
+                    </div>
+                    <p class="mt-1.5 text-slate-300">Leading design systems and building a climate intelligence platform used by governments and NGOs.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item flex gap-7">
+                <div class="shrink-0 w-8">
+                    <div class="timeline-dot w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center ring-8 ring-slate-800">
+                        <span class="text-[11px] font-bold">24</span>
+                    </div>
+                </div>
+                <div class="pt-1">
+                    <div class="flex flex-wrap items-baseline gap-x-3">
+                        <span class="font-semibold text-xl">Indie Hacker &amp; Consultant</span>
+                        <span class="text-xs px-3 py-px rounded bg-slate-700 text-slate-300 tracking-widest">2023 — 2024</span>
+                    </div>
+                    <p class="mt-1.5 text-slate-300">Shipped PixelCraft, EcoTrack, and helped three early-stage startups with product and frontend architecture.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item flex gap-7">
+                <div class="shrink-0 w-8">
+                    <div class="timeline-dot w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center ring-8 ring-slate-800">
+                        <span class="text-[11px] font-bold">22</span>
+                    </div>
+                </div>
+                <div class="pt-1">
+                    <div class="flex flex-wrap items-baseline gap-x-3">
+                        <span class="font-semibold text-xl">Frontend Engineer @ Lumen Labs</span>
+                        <span class="text-xs px-3 py-px rounded bg-slate-700 text-slate-300 tracking-widest">2021 — 2023</span>
+                    </div>
+                    <p class="mt-1.5 text-slate-300">Built the core UI platform for enterprise data tools used by Fortune 500 companies.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item flex gap-7">
+                <div class="shrink-0 w-8">
+                    <div class="timeline-dot w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center ring-8 ring-slate-800">
+                        <span class="text-[11px] font-bold">20</span>
+                    </div>
+                </div>
+                <div class="pt-1">
+                    <div class="flex flex-wrap items-baseline gap-x-3">
+                        <span class="font-semibold text-xl">First paid freelance gig + started studying Computer Science</span>
+                    </div>
+                    <p class="mt-1.5 text-slate-300">Built my first production React + Django website for a local non-profit. Discovered my love for frontend craft.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="max-w-screen-2xl mx-auto px-6 md:px-10 py-20 border-t border-white/10 bg-slate-900/50">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-indigo-400 mb-3">CHAPTER 05 — KIND WORDS</div>
+            <h2 class="text-5xl font-semibold tracking-tight">People I've worked with</h2>
+        </div>
+
+        <!-- Carousel -->
+        <div class="max-w-4xl mx-auto relative">
+            <div class="overflow-hidden rounded-3xl border border-white/10">
+                <div id="testimonial-track" class="flex transition-transform duration-500 ease-out">
+                    <!-- Slide 1 -->
+                    <div class="w-full shrink-0 px-10 py-12 bg-slate-900 testimonial-card">
+                        <div class="max-w-prose">
+                            <div class="flex items-center gap-x-1 text-amber-400 mb-5">
+                                ★★★★☆
+                            </div>
+                            <blockquote class="text-2xl leading-snug font-light tracking-tight">
+                                "Jenit is one of the most thoughtful engineers I’ve worked with. He has an incredible eye for interface details and shipped our most ambitious dashboard redesign in record time."
+                            </blockquote>
+                            <div class="mt-7">
+                                <div class="font-semibold">Priya Malhotra</div>
+                                <div class="text-xs text-slate-400">VP of Product, Climora</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="w-full shrink-0 px-10 py-12 bg-slate-900 testimonial-card">
+                        <div class="max-w-prose">
+                            <div class="flex items-center gap-x-1 text-amber-400 mb-5">
+                                ★★★★★
+                            </div>
+                            <blockquote class="text-2xl leading-snug font-light tracking-tight">
+                                "Working with Jenit on PixelCraft was a masterclass in product taste. He took an idea and turned it into a tool that thousands of designers now use every day. Highly recommended."
+                            </blockquote>
+                            <div class="mt-7">
+                                <div class="font-semibold">Marco Rivera</div>
+                                <div class="text-xs text-slate-400">Co-founder, Studio R</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="w-full shrink-0 px-10 py-12 bg-slate-900 testimonial-card">
+                        <div class="max-w-prose">
+                            <div class="flex items-center gap-x-1 text-amber-400 mb-5">
+                                ★★★★★
+                            </div>
+                            <blockquote class="text-2xl leading-snug font-light tracking-tight">
+                                "Jenit helped us reimagine our entire mobile experience. He delivered pixel-perfect work, thought deeply about performance and accessibility, and genuinely cared about our mission."
+                            </blockquote>
+                            <div class="mt-7">
+                                <div class="font-semibold">Aisha Khan</div>
+                                <div class="text-xs text-slate-400">CEO &amp; Co-founder, Earthly</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div class="flex items-center justify-between mt-5 px-1">
+                <div id="testimonial-dots" class="flex items-center gap-x-2"></div>
+                
+                <div class="flex items-center gap-2">
+                    <button id="testimonial-prev" 
+                            class="w-10 h-10 rounded-2xl border border-white/15 hover:bg-white/5 flex items-center justify-center transition active:bg-white/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="testimonial-next" 
+                            class="w-10 h-10 rounded-2xl border border-white/15 hover:bg-white/5 flex items-center justify-center transition active:bg-white/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-screen-2xl mx-auto px-6 md:px-10 py-20 border-t border-white/10">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-indigo-400 mb-3">CHAPTER 06 — LET'S CONNECT</div>
+            <h2 class="text-5xl font-semibold tracking-tighter">Have a project in mind?</h2>
+            <p class="text-xl mt-4 text-slate-300">Whether it's a new startup idea, redesign of an existing product, or just a chat about design systems — I'd love to hear from you.</p>
+        </div>
+
+        <div class="mt-12 max-w-xl mx-auto">
+            <form id="contact-form" class="space-y-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="text-xs font-semibold tracking-widest text-slate-400 block mb-1.5">YOUR NAME</label>
+                        <input type="text" name="name" required 
+                               class="form-input block w-full bg-slate-900 border border-white/15 text-lg placeholder:text-slate-500 rounded-2xl px-6 py-4 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="text-xs font-semibold tracking-widest text-slate-400 block mb-1.5">EMAIL ADDRESS</label>
+                        <input type="email" name="email" required 
+                               class="form-input block w-full bg-slate-900 border border-white/15 text-lg placeholder:text-slate-500 rounded-2xl px-6 py-4 focus:border-indigo-500">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="text-xs font-semibold tracking-widest text-slate-400 block mb-1.5">WHAT ARE YOU WORKING ON?</label>
+                    <textarea name="message" rows="5" required
+                              class="form-input block w-full resize-y bg-slate-900 border border-white/15 text-lg placeholder:text-slate-500 rounded-3xl px-6 py-4 focus:border-indigo-500"
+                              placeholder="Tell me a little about the project or opportunity..."></textarea>
+                </div>
+
+                <button type="submit" 
+                        class="w-full mt-2 btn-primary py-[17px] text-lg font-semibold tracking-[-0.2px] rounded-3xl text-white">
+                    Send Message
+                </button>
+            </form>
+
+            <div id="form-status" class="hidden text-center"></div>
+
+            <!-- Alternative contact -->
+            <div class="text-sm mt-9 text-slate-400">
+                Prefer email? Reach me directly at 
+                <a href="mailto:hello@jenit.dev" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">hello@jenit.dev</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-black">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-10 py-12 text-sm">
+            <div class="flex flex-col md:flex-row justify-between gap-y-6">
+                <div>
+                    <div class="flex items-center gap-x-3">
+                        <div class="w-8 h-8 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center">
+                            <span class="font-bold text-white text-lg tracking-tighter">J</span>
+                        </div>
+                        <span class="font-semibold">Jenit</span>
+                    </div>
+                    <p class="text-slate-400 mt-2">© 2026. Crafted with intention.</p>
+                </div>
+
+                <div class="flex flex-wrap gap-x-9 gap-y-2 text-slate-400">
+                    <a href="https://twitter.com" target="_blank" class="footer-link">Twitter / X</a>
+                    <a href="https://github.com/jenit" target="_blank" class="footer-link">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank" class="footer-link">LinkedIn</a>
+                    <a href="https://read.cv/jenit" target="_blank" class="footer-link">Read.cv</a>
+                    <a href="#projects" class="footer-link">All Projects</a>
+                </div>
+            </div>
+
+            <div class="mt-10 text-xs text-slate-500">
+                This website is fully self-contained — just open <span class="font-mono text-[10px] bg-white/5 px-1.5 py-px rounded">index.html</span> in any browser. 
+                Built as a complete portfolio experience on Day 56 of my coding journey.
+            </div>
+        </div>
+    </footer>
+
+    <!-- PROJECT MODAL -->
+    <div id="project-modal" class="hidden fixed inset-0 z-[70] items-center justify-center bg-black/90 p-4 md:p-8">
+        <div class="w-full max-w-3xl bg-slate-900 border border-white/10 rounded-3xl relative shadow-2xl">
+            <!-- Close -->
+            <button id="modal-close"
+                    class="absolute -top-4 -right-3 bg-slate-950 border border-white/10 hover:bg-slate-800 w-10 h-10 flex items-center justify-center rounded-full z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div id="modal-content" class="p-8 md:p-10 text-left">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Small inline Tailwind script override (safe) -->
+    <script>
+        // Basic Tailwind script-level theme extension
+        if (typeof tailwind !== 'undefined') {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'display': ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif']
+                        }
+                    }
+                }
+            };
+        }
+    </script>
+</body>
+</html>

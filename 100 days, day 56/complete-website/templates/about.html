@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}About — Jenit's DOOM{% endblock %}
+
+{% block content %}
+<div class="min-h-screen max-w-3xl mx-auto px-8 py-16">
+    <a href="/" class="retro-button inline-block mb-8 text-xl">← BACK TO HELL</a>
+
+    <h1 class="text-7xl mb-2">About This Project</h1>
+    <p class="text-3xl text-[#8a6646]">A Flask + Jinja2 + pure JavaScript raycasting experiment.</p>
+
+    <div class="my-10 space-y-7 text-xl">
+        <p>This is a fully playable DOOM-style first-person shooter built from scratch for the browser.</p>
+        
+        <p>The engine uses classic <strong>DDA raycasting</strong> (the same technique used in Wolfenstein 3D and the original DOOM). No WebGL, no external game engines — just math, &lt;canvas&gt;, and a lot of love for retro games.</p>
+
+        <p>Everything is served dynamically through Flask routes and Jinja templates.</p>
+    </div>
+
+    <div class="retro-border p-8 bg-[#2a1f17] text-xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6">
+            <div>
+                <div class="text-[#9d2a1f] text-xl tracking-widest mb-1">TECH USED</div>
+                <ul class="list-none space-y-1">
+                    <li>Python + Flask</li>
+                    <li>Jinja2 Templating</li>
+                    <li>HTML5 Canvas + JS</li>
+                    <li>Web Audio API</li>
+                    <li>VT323 font + Tailwind</li>
+                </ul>
+            </div>
+            <div>
+                <div class="text-[#9d2a1f] text-xl tracking-widest mb-1">FEATURES</div>
+                <ul class="list-none space-y-1">
+                    <li>Real-time raycasted 3D</li>
+                    <li>Enemy AI + sprite scaling</li>
+                    <li>Mouse look + pointer lock</li>
+                    <li>Hitscan shooting</li>
+                    <li>Full HUD + minimap</li>
+                    <li>Retro sound effects</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-10 text-center">
+        <a href="/doom" class="text-4xl px-9 py-3 inline-block border-4 border-[#c9b38a] bg-[#9d2a1f] text-white">RETURN TO THE GAME</a>
+    </div>
+</div>
+{% endblock %}
